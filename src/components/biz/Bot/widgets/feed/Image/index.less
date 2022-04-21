@@ -1,0 +1,43 @@
+/**
+ * @file components/biz/Bot/DialogZone/components/feed/Image
+ * @desc 图片组件
+ * @author v_liaopeiyang
+ */
+
+ .feed-img-wrap {
+    display: flex;
+    a {
+        width: 100%;
+    }
+    .feed-img-box {
+        padding: 12px 16px;
+        height: 192px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        .feed-img-box-title {
+            font-family: SourceHanSansCN-Medium;
+            font-size: 16px;
+            color: #FFF;
+            letter-spacing: 0;
+            line-height: 20px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+        }
+        .feed-img-author {
+            margin-top: 4px;
+            font-family: SourceHanSansCN-Regular;
+            font-size: 12px;
+            color: rgba(255,255,255,0.45);
+            letter-spacing: 0;
+            line-height: 18px;
+            span {
+                &:first-child {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}

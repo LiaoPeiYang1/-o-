@@ -1,0 +1,43 @@
+/**
+ * @file modules/common/css/common.less
+ * @author zhangzhe
+ */
+
+ @import './variable.less';
+ 
+html {
+    font-size: 10px; // 这个值先写死，后面考虑变成活的
+    *:not(textarea, input) {
+        -webkit-touch-callout: none; /*系统默认菜单被禁用*/
+        -webkit-user-select: none; /*webkit浏览器*/
+        -khtml-user-select: none; /*早期浏览器*/
+        -moz-user-select: none; /*火狐*/
+        -ms-user-select: none; /*IE10*/
+        user-select: none;
+    }
+}
+ 
+body {
+     background-color: #FFF !important;
+     color: #333;
+     font-size: 14px;
+     -webkit-text-size-adjust: none;
+     max-width: 100%;
+     overflow-x: hidden;
+     vertical-align: top;
+     font-family: Arial,Helvetica,sans-serif;
+}
+
+.primary-layout {
+    min-height: 100%;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+// 重写vconsole位置
+#__vconsole .vc-toolbar,
+#__vconsole .vc-switch {
+    top: 10px !important;
+    bottom: auto !important;
+}

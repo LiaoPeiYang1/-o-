@@ -1,0 +1,37 @@
+/**
+ * @file components/biz/Bot/widgets/Card/index.less
+ * @author dingyang
+ */
+
+@triangle-height: 9px;
+
+.bd-bot-widget-card {
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, .8);
+    box-shadow: 0 0 15px 0 rgba(184, 157, 123, .2), inset 0 0 5px 0 #FFF;
+    border-radius: 8px;
+    &.bd-bot-widget-card-with-triangle {
+        position: relative;
+        margin-top: @triangle-height;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -100%);
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-left: 7.5px solid transparent;
+            border-right: 7.5px solid transparent;
+            border-bottom: @triangle-height solid rgba(255, 255, 255, .8);
+        }
+    }
+    &.bd-bot-widget-card-inline {
+        position: relative;
+        display: inline-block;
+        max-width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

@@ -1,0 +1,31 @@
+/**
+ * @file components/biz/Bot/widget/Texts/index.less
+ * @author dingyang
+ */
+
+.bd-bot-widget-text-weak-buttons {
+    .text-weak-buttons-box {
+        margin-top: 12px;
+        .bd-bot-inline-button {
+            position: relative;
+            font-size: 14px;
+            color: var(--menuButtonColor);
+            padding: 10px 0;
+            border-top: 1px solid #ddd;
+            &:after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                right: 0;
+                width: 9px;
+                height: 13px;
+                margin-top: -7px;
+                background: url(../../../../../../assets/img/more.png) no-repeat center center;
+                background-size: contain;
+            }
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
+    }
+}

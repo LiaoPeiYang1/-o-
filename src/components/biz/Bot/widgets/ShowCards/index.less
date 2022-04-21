@@ -1,0 +1,68 @@
+/**
+ * @file components/biz/Bot/widget/showCards/index.less
+ * @author v_liaopeiyang
+ */
+
+.bd-bot-widget-cards {
+    padding: 6px 0;
+    box-sizing: border-box;
+    .bd-bot-widget-cards-block {
+        width: 100%;
+        display: flex;
+        overflow-x: auto;
+        scrollbar-width: none; /* Firefox */
+        -webkit-overflow-scrolling: touch;    /* ios5+ */ 
+        &::-webkit-scrollbar {
+            display: none; /* Chrome Safari */
+        }
+        .bd-bot-widget-cards-item {
+            width: 150px;
+            height: 175px;
+            background: #FFF;
+            border: 1px solid #DDD;
+            border-radius: 8px;
+            margin-right: 6px;
+            font-family: PingFangSC-Regular;
+            font-size: 14px;
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            .bd-bot-widget-cards-item-img {
+                width: 100%;
+                height: 95px;
+                margin-bottom: 8px;
+                background-color: #F6F6F6;
+                object-fit: contain;
+                object-position: center center;
+            }
+            .bd-bot-widget-name-wrap {
+                display: flex;
+                align-items: center;
+                height: 40px;
+                .bd-bot-widget-cards-item-name {
+                    font-family: SourceHanSansCN-Medium;
+                    font-size: 16px;
+                    color: #000;
+                    letter-spacing: 0;
+                    text-align: center;
+                    line-height: 20px;
+                    width: 100%;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+    .widget-cards-item-block {
+        &:first-child {
+            margin-left: 17px;
+        }
+        &:last-child {
+            .bd-bot-widget-cards-item {
+                margin-right: 17px;
+            }
+        }
+    }
+}

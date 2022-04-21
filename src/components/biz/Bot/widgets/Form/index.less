@@ -1,0 +1,140 @@
+.bd-form-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px 0 rgba(1, 85, 158, .24);
+    color: #3f3f3f;
+    .bd-form-title {
+        padding: 10px 0;
+        text-align: center;
+    }
+    .bd-form-content {
+        padding: 16px 17.5px;
+        .bd-form-item-container {
+            .bd-form-item-error {
+                .am-input-control input {
+                    background-color: rgba(255,45,0,0.04);
+                    border-color: #ff2d00;
+                    &::placeholder {
+                        color: #ff2d00;
+                    }
+                }
+                .am-list-extra {
+                    color: #ff2d00;
+                }
+            }
+            margin-bottom: 10px;
+            &:after {
+                content: ' ';
+                clear: both;
+            }
+            .bd-form-item-label {
+                float: left;
+                margin: 0 7px 0 0;
+                width: 6em;
+                line-height: 32px;
+                font-size: 13px;
+                color: #3f3f3f;
+                font-weight: normal;
+            }
+            .am-list-item {
+                margin: 0;
+                padding: 0;
+                line-height: 32px;
+                height: initial;
+                min-height: initial;
+                .am-list-line {
+                    padding: 0;
+                }
+            }
+            .am-input-label,
+            .am-list-content,
+            .bd-form-item-text h3 {
+                margin: 0 7px 0 0;
+                padding: 0;
+                width: 6em;
+                line-height: 32px;
+                font-size: 13px;
+                color: #3f3f3f;
+                font-weight: normal;
+            }
+            .am-list-content {
+                flex: initial;
+                text-overflow: initial;
+            }
+            .am-list-extra {
+                padding: 0;
+                color: #3f3f3f;
+                font-size: 14px;
+                width: calc(100% - 6em - 20px);
+                flex-basis: initial;
+            }
+            .am-list-arrow {
+                width: 8px;
+                height: 8px;
+            }
+            .am-input-control {
+                input {
+                    background-color: #f8f8f8;
+                    border: 1px solid transparent;
+                    border-radius: 6px;
+                    text-indent: 14px;
+                    padding: 0;
+                    line-height: 1;
+                    height: 32px;
+                    font-size: 14px;
+                    color: #000;
+                    &::placeholder {
+                        color: #c1c1c1;
+                    }
+                    &:focus {
+                        border-color: #1D8EF7;
+                    }
+                }
+            }
+            .am-checkbox-agree {
+                margin: 0;
+                padding: 0;
+                .am-checkbox-agree-label {
+                    margin-left: 22px;
+                }
+                .am-checkbox {
+                    width: 12px;
+                    height: 12px;
+                    .am-checkbox-input,
+                    .am-checkbox-inner {
+                        width: inherit;
+                        height: inherit;
+                        top: 2px;
+                    }
+                    &.am-checkbox-checked {
+                        .am-checkbox-inner {
+                            background-color: #2cce00;
+                            border-color: #2cce00;
+                            &:after {
+                                width: 3px;
+                                height: 6px;
+                                right: 3px;
+                                top: 1px;
+                            }
+                        }
+                    }
+                }
+                .am-checkbox-wrapper {
+                    color: #a2a2a2;
+                    font-size: 12px;
+                    line-height: 16px;
+                }
+            }
+            .bd-form-item-text {
+                display: flex;
+                & > div {
+                    line-height: 32px;
+                }
+            }
+        }
+    }
+}
+
+.bd-form-item-picker-view {
+    left: 50%;
+}

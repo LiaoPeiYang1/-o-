@@ -1,0 +1,56 @@
+/**
+ * @file components/biz/Bot/DialogZone/components/index.less
+ * @author dingyang
+ */
+
+.bd-bot-widget-phone-reply {
+    display: flex;
+
+    .phone-item-center {
+        color: #333;
+        flex: 1;
+        max-width: initial !important;
+        border: 1px solid var(--themeColor);
+        background-color: var(--themeColor);
+    }
+
+    .phone-vscode-box {
+        display: flex;
+        .phone-vscode {
+            flex: 1;
+        }
+        .phone-vscode-send {
+            display: flex;
+            align-items: center;
+            padding-right: 20px;
+            font-size: 14px;
+            color: var(--themeColor);
+            background-color: #fff;
+            &.vscode-disable {
+                color: #ccc;
+            }
+        }
+    }
+    .bd-bot-phone-submit {
+        padding: 10px 16px;
+        background-color: var(--themeColor);
+        color: #fff;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .am-list-item.am-input-item {
+        height: 36px;
+        min-height: 36px;
+        padding-left: 0;
+        // border: 1px solid #DDD;
+        // border-radius: 8px;
+    }
+    .am-list-item .am-input-control,
+    .am-list-item .am-input-control input {
+        font-size: 14px;
+    }
+    .am-list-item .am-input-control {
+        padding-left: 15px;
+    }
+}

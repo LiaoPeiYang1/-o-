@@ -1,0 +1,60 @@
+/**
+ * @file components/biz/Bot/widgets/FullScreenComposite/index.less
+ * @author dingyang
+ */
+
+.bd-bot-widget-fullscreen {
+    padding: 0 17px;
+ 
+    // 文本卡片样式
+    .full-screen-text-button-card {
+        margin: 9px 0;
+        &:empty {
+            display: none;
+        }
+    }
+    // 底部非weak-buttons
+    .bd-bot-unWeak-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        .bd-bot-inline-button {
+            flex: 1;
+            background: #B89D7B;
+            box-shadow: 0 0 10px 0 rgba(149, 114, 69, .2);
+            border-radius: 8px;
+            padding: 8px 10px;
+            text-align: center;
+            font-size: 14px;
+            margin: 3px 8px 3px 0;
+            min-width: 40%;
+
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            word-break: break-all;
+
+            &.highlight-button {
+
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    .bd-bot-widget-skill {
+        padding: 0;
+    }
+    .bd-bot-dialog-item {
+        padding: 6px 0;
+    }
+}
+.bd-bot-custom-widget-fullscreen {
+    margin: 9px 0;
+    overflow: hidden;
+    .custom-feed-cards, .bd-bot-dialog-item {
+        padding: 0 17px;
+    }
+    .feed-goods-wrap, .bd-bot-widget-cards {
+        padding: 0;
+    }
+}

@@ -1,0 +1,58 @@
+/**
+ * @file components/biz/Bot/DialogZone/components/finance/components/analysis/analysisText
+ * @desc 组合信息
+ * @author v_liaopeiyang
+ */
+
+.finance-analysis-text-wrap {
+    .finance-analysis-text-box {
+        background-color: white;
+        border: 1px solid #DDD;
+        border-radius: 8px;
+        padding: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-image: url(../../../../../../../assets/img/money.png);
+        background-size: 90px 90px;
+        background-repeat: no-repeat;
+        background-position: right;
+        .analysis-text-content {
+            width: 64%;
+            .analysis-text-name {
+                font-family: SourceHanSansCN-Medium;
+                font-size: 16px;
+                color: #000;
+                letter-spacing: 0;
+                line-height: 20px;
+                width: 100%;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+            .analysis-text-desc {
+                width: 100%;
+                font-family: SourceHanSansCN-Regular;
+                font-size: 12px;
+                color: #979797;
+                letter-spacing: 0;
+                line-height: 18px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                margin-top: 4px;
+            }
+        }
+        .analysis-tex-button {
+            background-color: var(--themeColor);
+            width: 92px;
+            height: 37px;
+            font-family: PingFangSC-Medium;
+            font-size: 14px;
+            color: #FFF;
+            text-align: center;
+            line-height: 37px;
+            border-radius: 8px;
+        }
+    }
+}

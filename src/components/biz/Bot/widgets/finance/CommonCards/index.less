@@ -1,0 +1,49 @@
+/**
+ * @file components/biz/Bot/DialogZone/finance/components/card
+ * @desc cards
+ * @author v_liaopeiyang
+ */
+
+.bot-finance-cards-wrap {
+    .bot-finance-cards {
+        border: 1px solid #DDD;
+        border-radius: 8px !important;
+        overflow: hidden;
+        background-color: white;
+        .bot-finance-card {
+            padding: 0;
+            .bot-finance-card-box {
+                border: none;
+                padding-bottom: 0;
+                border-radius: 0;
+                .finance-card-box-content {
+                    border-bottom: 1px solid #DDD;
+                }
+            }
+        }
+        .finance-card-box-content {
+            padding-bottom: 12px;
+        }
+        .finance-cards-more {
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            font-family: PingFangSC-Semibold;
+            font-size: 12px;
+            color: var(--menuButtonColor);
+            border-top: 1px solid #DDD;
+        }
+        .bot-finance-card-wrap {
+            width: 100%;
+        }
+    }
+    .finance-cards-item {
+        &:last-child {
+            .bot-finance-card-box {
+                .finance-card-box-content {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}

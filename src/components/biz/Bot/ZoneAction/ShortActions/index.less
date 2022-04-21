@@ -1,0 +1,74 @@
+/**
+ * @file components/biz/Bot/ZoneAction/ShortActions/index.less
+ * @author dingyang
+ */
+
+.bd-bot-actions-short {
+    overflow: hidden;
+    .bd-bot-actions-short-top-block {
+        margin: 0 16px;
+        .bd-bot-actions-short-text {
+            padding: 10px;
+            background-color: var(--themeColor);
+            color: #fff;
+            font-size: 14px;
+            border-radius: 8px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            word-break: break-all;
+            text-align: center;
+            margin: 5px 0;
+            margin-bottom: 8px;
+        }
+    }
+    .bd-bot-actions-short-block {
+        overflow-x: auto;  
+        white-space: nowrap;
+        display: flex;
+        scrollbar-width: none; /* Firefox */
+        -webkit-overflow-scrolling: touch;    /* ios5+ */ 
+
+        .bd-bot-actions-short-text-box {
+            padding: 0 4px;
+            animation: fadeInLeft 1s ease-out;
+
+            &:first-child {
+                padding-left: 16px;
+            }
+
+            &:last-child {
+                padding-right: 16px;
+            }
+        }
+
+        .bd-bot-actions-short-text {
+            font-family: SourceHanSansCN-Heavy, PingFangSC-Semibold;
+            float: left;
+            color: var(--tagColor);
+            font-size: 12px;
+            height: 26px;
+            line-height: 26px;
+            background-color: #fff;
+            padding: 0 12px;
+            border-radius: 13px;
+            margin: 1px 0; // 微信 tag border-bottom 不显示
+            border: 1px solid #fff;
+            &.highlight-tag {
+                border-color: var(--tagHighLightBorderColor);
+            }
+        }
+        &::-webkit-scrollbar {
+            display: none; /* Chrome Safari */
+        }
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        margin-left : 100%;
+    }
+    100% {
+        margin-left : 0%;
+    }
+}

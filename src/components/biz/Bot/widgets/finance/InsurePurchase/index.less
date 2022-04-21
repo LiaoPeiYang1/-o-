@@ -1,0 +1,84 @@
+/**
+ * @file components/biz/Bot/DialogZone/finance/components/purchase
+ * @desc purchase
+ * @author v_liaopeiyang
+ */
+
+.finance-insure-purchase-wrap {
+    .finance-insure-purchase-card {
+        background: white;
+        padding: 12px 16px;
+        color: #000;
+        font-family: SourceHanSansCN-Medium;
+        border: 1px solid #DDD;
+        border-radius: 8px;
+        overflow: hidden;
+        .purchase-card-top {
+            display: flex;
+            .purchase-top-sign {
+                background-image: linear-gradient(130deg, #F5F2EE 0%, #ECE0D1 100%);
+                border-radius: 0 0 10px 0;
+                font-size: 10px;
+                color: #796751;
+                padding: 5px 10px;
+                margin-left: -16px;
+                margin-top: -12px;
+            }
+        }
+        .purchase-name {
+            font-family: SourceHanSansCN-Medium;
+            font-size: 16px;
+            color: #000;
+            letter-spacing: 0;
+            line-height: 20px;
+            margin-top: 10px;
+        }
+        .purchase-desc {
+            margin-top: 4px;
+            display: flex;
+            color: #979797;
+            width: 100%;
+            font-family: SourceHanSansCN-Regular;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            .purchase-desc-tags-item {
+                font-size: 12px;
+                color: #979797;
+                letter-spacing: 0;
+                line-height: 15px;
+                padding: 0 5px;
+                border-left: 1px solid #DDD;
+                &:first-child {
+                    padding-left: 0;
+                    border-left: none;
+                }
+            }
+        }
+        .insure-purchase-join {
+            margin-top: 16px;
+            display: flex;
+            justify-content: space-between;
+            .purchase-join-price {
+                font-family: DINAlternate-Bold;
+                font-size: 28px;
+                color: #FF2D00;
+                letter-spacing: 1.11px;
+                span {
+                    font-family: SourceHanSansCN-Regular;
+                    font-size: 14px;
+                    margin-left: 3px;
+                }
+            }
+            .purchase-join-button {
+                width: 92px;
+                height: 37px;
+                text-align: center;
+                line-height: 37px;
+                color: white;
+                background: var(--themeColor);
+                border-radius: 8px;
+            }
+        }
+    }
+}

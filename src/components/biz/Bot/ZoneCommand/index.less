@@ -1,0 +1,56 @@
+/**
+ * @file components/biz/Bot/ZoneCommand/index.less
+ * @author dingyang
+ */
+
+.bd-bot-command-zone {
+    padding: 5px 16px;
+    display: flex;
+    animation: entry 0.3s linear;
+    &:empty {
+        padding: 0;
+    }
+    &.layout-column {
+        flex-direction: column;
+    }
+
+    .bd-bot-radio-button {
+        color: #262626;
+        font-size: 12px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 7px 7px 9px 8px;
+        border-radius: 8px;
+        font-size: 14px;
+        margin: 3px 0;
+        line-height: 18px;
+        vertical-align: middle;
+
+        .radio-button-prefix {
+            margin-right: 10px;
+            font-size: 12px;
+        }
+        &.highlight-radio {
+            // 高亮暂时不需要样式
+        }
+        &:active {
+            background-color: var(--themeColor);
+            border-color: transparent;
+            color: #fff;
+        }
+        * {
+            vertical-align: middle;
+        }
+    }
+}
+
+@keyframes entry {
+    from {
+        transform: translateY(-350px);
+        position: absolute;
+    }
+    to {
+        transform: translateY(0);
+        position: absolute;
+    }
+}

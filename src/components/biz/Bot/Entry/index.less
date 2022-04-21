@@ -1,0 +1,64 @@
+/**
+ * @file components/biz/Bot/Entry/index.less
+ * @author v_liaopeiyang
+ */
+
+ .bd-bot-entry-session {
+    .bd-bot-entry-session-text {
+        font-family: PingFangSC-Regular;
+        font-size: 12px;
+        color: #333333;
+        letter-spacing: 0;
+        line-height: 18px;
+        box-sizing: border-box;
+        width: 250px;
+        background: #EBF5FF;
+        border: 1px solid #D0E6FC;
+        border-radius: 8px;
+        padding: 14px 16px;
+        animation: entry-session-box 0.2s linear;
+        position: fixed;
+        top: 68vh;
+        margin-left: 75px;
+        height: 65px;
+        box-shadow: 2px 4px 6px rgba(141, 178, 215, .4);
+    }
+    .bd-bot-avatar {
+        position: fixed;
+        top: 68vh;
+        margin-left: 5px;
+        box-shadow: 0 4px 6px rgba(116, 161, 206, .4);
+    }
+    .bd-bot-avatar:hover {
+        animation: hover-img 0.1s linear;
+    }
+    .bd-bot-avatar:focus {
+        animation: hover-img 0.1s linear;
+    }
+}
+
+@keyframes entry-session-box {
+    0% {
+        width: 50;
+        height: 0;
+    }
+    80% {
+        scale: (1.05);
+        width: 64%;
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes hover-img {
+    0% {
+       transform: scale(1);
+    }
+    80% {
+        transform: scale(1.08);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,215 @@
+/**
+ * @file components/biz/Bot/index.less
+ * @author dingyang
+ */
+
+@border-radius: 20px;
+
+.bd-bot-layout-wrap {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .3);
+
+    box-sizing: border-box;
+    // 优化移动端闪烁问题
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+    &.layout-min {
+        & {
+            height: 0;
+        }
+        .bd-bot-layout {
+            animation: leave .2s linear;
+        }
+    }
+    &.layout-max {
+        .bd-bot-layout {
+            animation: entry .15s linear;
+        }
+    }
+    &.layout-spread {
+        .bd-bot-layout {
+            height: 85%;
+            transition: height .4s linear;
+        }
+    }
+    &.layout-fold {
+        background-color: transparent;
+        .bd-bot-layout {
+            height: 25vh;
+            transition: height .3s linear;
+            .layout-main-dialog {
+                flex: none;
+            }
+            .layout-main-action {
+                position: absolute;
+                bottom: 0;
+                z-index: 9;
+                padding-top: 20px;
+                background-image: linear-gradient(to top, #f6f6f6 60px, rgba(246, 246, 246, 0) 100%);
+            }
+        }
+    }
+    &.layout-control-fullScreen {
+        .bd-bot-layout {
+            height: 100%;
+            transition: height .2s linear;
+            border-radius: 0 !important;
+            &::before,
+            &::after {
+                border-radius: 0 !important;
+            }
+        }
+    } 
+    &.layout-control-min {
+        .bd-bot-layout {
+            height: 0;
+            transition: height .2s linear;
+            border-radius: 0 !important;
+        }
+    }
+
+    &.full_screen_wrap {
+        background-color: #f6f6f6;
+        .bd-bot-layout {
+            height: 100% !important;
+            border-radius: 0 !important;
+            top: 0;
+            /* 首页-头部刘海屏兼容设置 */
+            padding-top: calc(~'constant(safe-area-inset-top)');
+            padding-top: calc(~'env(safe-area-inset-top)');
+            &::before,
+            &::after {
+                border-radius: 0;
+            }
+        }
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+}
+
+.bd-bot-layout {
+    position: fixed;
+    z-index: 99;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+
+    background-color: #F6F6F6;
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+
+    // 解决fixed元素滑动闪问题
+    transform: translateZ(0);
+
+    border-top-left-radius: @border-radius;
+    border-top-right-radius: @border-radius;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -15px;
+        top: 0;
+        border-top-left-radius: @border-radius;
+        border-top-right-radius: @border-radius;
+        background-repeat: no-repeat;
+        background-position: center -10px;
+        background-size: cover;
+    }
+    &.blue-theme::before{
+        background-image: url(../../../../assets/img/img_bg_blue@2x.jpg);
+        z-index: -10;
+    }
+    &.golden-theme::before{
+        background-image: url(../../../../assets/img/img_bg_golden@2x.jpg);
+        z-index: -10;
+    }
+    &::after {
+        background-image: url(../../../../assets/img/img_bg_mask@2x.png);
+        z-index: -1;
+    }
+
+    .bd-layout-header {
+        margin-top: -25px;
+        &:empty {
+            display: none;
+        }
+    }
+
+    .bd-layout-watermark {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -5;
+
+        // 背景图相关样式配置
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+}
+
+.bd-bot-btn:active {
+    opacity: .7;
+    -webkit-tap-highlight-color: transparent;
+}
+
+@keyframes entry {
+    from {
+        position: fixed;
+        bottom: -25vh;
+    }
+    to {
+        position: fixed;
+        bottom: 0;
+    }
+}
+
+// 为什么要用 fixed 去处理消失  因为 在安卓机上 position
+@keyframes leave {
+    from {
+        position: fixed;
+        bottom: 0;
+    }
+    to {
+        position: fixed;
+        bottom: -25vh;
+    }
+}
+
+.modal-open {
+    position: fixed;
+    width: 100%;
+}
+
+.with-hidden {
+    overflow: hidden;
+}
+
+.navigation-open {
+    overflow: hidden !important;
+}
+
+img[src=""],
+img:not([src]) {
+    opacity:0;
+}
+

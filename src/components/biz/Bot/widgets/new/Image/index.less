@@ -1,0 +1,38 @@
+/**
+ * @file components/biz/Bot/widgets/new/index.less
+ * @author dingyang
+ */
+
+.bd-bot-widget-image-new {
+    .image-image-box {
+        .widget-img {
+            float: left;
+            width: 100%;
+            height: 130px;
+            object-fit: cover;
+            object-position: center center;
+        }
+        &::after {
+            content: '';
+            clear: both;
+        }
+    }
+    .image-caption-box {
+        padding: 12px 10px;
+        font-size: 14px;
+        color: #333;
+        .image-caption {
+            font-family: PingFangSC-Semibold;
+            margin-top: 12px;
+            line-height: 21px;
+        }
+        .image-sub-caption {
+            margin-top: 4px;
+            line-height: 21px;
+            text-align: justify;
+        }
+        &:empty {
+            display: none;
+        }
+    }
+}

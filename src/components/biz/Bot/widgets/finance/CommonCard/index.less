@@ -1,0 +1,220 @@
+/**
+ * @file components/biz/Bot/DialogZone/components/finance/components/cards/index.less
+ * @author v_liaopeiyang
+ */
+
+.bot-finance-card {
+    display: flex;
+    .card-content-desc {
+        font-family: SourceHanSansCN-Regular;
+        font-size: 10px;
+        color: #979797;
+        letter-spacing: 0;
+        height: 12px;
+        line-height: 12px;
+        padding-left: 5px;
+        border-left: 1px solid #979797;
+        padding-right: 5px;
+        margin-top: 3px;
+        &:first-child {
+            padding-left: 0;
+            border-left: none;
+        }
+    }
+    .desc-list {
+        display: flex;
+        line-height: 15px;
+        margin-top: 2px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .finance-card-content {
+        padding-top: 6px;
+        display: flex;
+        .content-left-desc {
+            padding: 0;
+            border-left: none;
+            line-height: 15px;
+        }
+        .card-content-left {
+            height: 22px;
+            line-height: 22px;
+            font-family: DINAlternate-Bold;
+            font-size: 22px;
+            color: #FF2D00;
+            letter-spacing: 1.75px;
+            width: 24%;
+            .card-content-desc {
+                font-family: SourceHanSansCN-Regular;
+                font-size: 10px;
+                color: #979797;
+                letter-spacing: 0;
+                height: 15px;
+                line-height: 15px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+        }
+        .card-content-right {
+            width: 76%;
+            margin-left: 23px;
+            font-family: SourceHanSansCN-Medium;
+            font-size: 16px;
+            color: #000;
+            letter-spacing: 0;
+            line-height: 22px;
+            padding-right: 12px;
+            .content-right-info {
+                width: 100%;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+        }    
+    }
+    .bot-finance-card-box {
+        width: 100%;
+        background: white;
+        border-radius: 8px;
+        border: 1px solid #DDD;
+        padding: 8px 16px;
+        padding-bottom: 12px;
+        .finance-card-top-block {
+            display: flex;
+            font-family: SourceHanSansCN-Regular;
+            font-size: 13px;
+            color: #000;
+            letter-spacing: 0;
+            height: 18px;
+            align-items: center;
+            .card-top-sign {
+                background-image: linear-gradient(130deg, #F5F2EE 0%, #ECE0D1 100%);
+                font-family: SourceHanSansCN-Medium;
+                font-size: 8px;
+                color: #796751;
+                letter-spacing: 0.4px;
+                text-align: center;
+                margin-right: 8px;
+                margin-left: -16px;
+                padding: 3px 5px;
+                border-radius: 0px 5px 5px 0px;
+            }
+            .card-top-tag {
+                font-family: SourceHanSansCN-Regular;
+                font-size: 8px;
+                color: #FE5E5E;
+                letter-spacing: 0.4px;
+                text-align: center;
+                margin-left: 10px;
+                padding: 2px 4px;
+                border-radius: 10px;
+            }
+        }
+    }
+    .bot-finance-ranking-class {
+        display: flex;
+        .bot-finance-card-box-left {
+            width: 43px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            img {
+                width: 24px;
+                height: 24px;
+            }
+            .card-box-left-num {
+                font-size: 16px;
+                color: #000;
+                padding-left: 7px;
+                padding-top: 10px;
+            }
+        }
+        .bot-finance-card-box-right {
+            width: 78%;
+            .card-content-right {
+                padding-right: 0;
+            }
+        }
+    }
+    .insure-normal-card-content {
+        display: flex;
+        justify-content: space-between;
+        .insure-normal-card-left {
+            width: 75%;
+            .insure-normal-card-title {
+                font-family: SourceHanSansCN-Medium;
+                font-size: 14px;
+                color: #000;
+                letter-spacing: 0;
+                line-height: 20px;
+            }
+        }
+        .insure-normal-card-right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .bot-finance-normal-list {
+        .bot-finance-card-box-left {
+            display: none;
+        }
+        .bot-finance-card-box-right {
+            width: 100%;
+        }
+    }
+    .insure-card-content {
+        padding-top: 4px;
+        display: flex;
+        .finance-insure-box-image {
+            width: 60px;
+            height: 60px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 60px 60px;
+            position: relative;
+            .insure-image-name {
+                background: rgba(255, 255, 255, .8);
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                font-size: 10px;
+                color: #979797;
+                text-align: center;
+                font-family: SourceHanSansCN-Regular;
+                padding: 2px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+    
+        }
+        .finance-insure-box-right {
+            margin-left: 16px;
+            .content-right-info {
+                font-family: SourceHanSansCN-Medium;
+                font-size: 14px;
+                color: #000;
+                letter-spacing: 0;
+            }
+            .insure-price-block {
+                margin-top: 5px;
+            }
+            
+        }
+    }
+    .insure-price {
+        font-family: DINAlternate-Bold;
+        font-size: 22px;
+        color: #FF2D00;
+        letter-spacing: .8px;
+        span {
+            font-family: SourceHanSansCN-Regular;
+            font-size: 10px;
+            color: #FF2D00;
+            margin-left: 3px;
+        }
+    }
+}

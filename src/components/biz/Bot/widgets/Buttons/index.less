@@ -1,0 +1,54 @@
+/**
+ * @file components/biz/Bot/DialogZone/components/Buttons/index.less
+ * @author dingyang
+ */
+
+ .bd-bot-inline-default-buttons {
+    margin-top: 12px;
+    display: flex;
+    .bd-bot-inline-button {
+        flex: 1;
+        font-family: SourceHanSansCN-Heavy, PingFangSC-Semibold;
+        margin-right: 8px;
+        border-radius: 8px;
+        font-size: 14px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        text-align: center;
+        color: #333;
+        border: 1px solid #ddd;
+        &.highlight-button {
+            color: #fff;
+            background-color: var(--themeColor);
+            border-color: transparent;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.bd-bot-inline-menu-buttons {
+    margin-top: 12px;
+    .bd-bot-inline-button {
+        position: relative;
+        font-size: 14px;
+        color: var(--menuButtonColor);
+        padding: 10px 0;
+        border-top: 1px solid #ddd;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 9px;
+            height: 13px;
+            margin-top: -7px;
+            background: url(../../../../../../assets/img/more.png) no-repeat center center;
+            background-size: contain;
+        }
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+}

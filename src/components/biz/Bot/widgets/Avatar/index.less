@@ -1,0 +1,42 @@
+/**
+ * @file components/biz/Bot/DialogZone/components/Avatar/index.less
+ * @author dingyang
+ */
+
+@small-width: 32px;
+@middle-width: 45px;
+
+.bd-bot-avatar {
+    width: @small-width;
+    height: @small-width;
+    background-color: transparent;
+    border-radius: 50%;
+    margin-right: 10px;
+    overflow: hidden;
+    &.bot-avatar-small {
+        width: @small-width;
+        height: @small-width;
+    }
+    &.bot-avatar-middle {
+        width: @middle-width;
+        height: @middle-width;
+    }
+    &.bot-avatar-big {
+        width: 65px;
+        height: 65px;
+    }
+    .bd-bot-avatar-head {
+        width: 100%;
+        height: 100%;
+    }
+    &.head-portrait-big {
+        width: @middle-width;
+        height: @middle-width;
+        transition: all .2s;
+    }
+    &.head-portrait-small {
+        width: @small-width;
+        height: @small-width;
+        transition: all .2s;
+    }
+}

@@ -1,0 +1,114 @@
+/**
+ * @file components/biz/Bot/DialogZone/finance/components/purchase
+ * @desc purchase
+ * @author v_liaopeiyang
+ */
+
+.bot-finance-purchase-wrap {
+    .bot-finance-purchase-card {
+        background: white;
+        padding: 12px 16px;
+        color: #000;
+        font-family: SourceHanSansCN-Medium;
+        text-align: center;
+        border: 1px solid #DDD;
+        border-radius: 8px;
+        overflow: hidden;
+        .purchase-card-top {
+            display: flex;
+            .purchase-top-sign {
+                background-image: linear-gradient(130deg, #F5F2EE 0%, #ECE0D1 100%);
+                border-radius: 0 0 10px 0;
+                font-size: 10px;
+                color: #796751;
+                padding: 5px 10px;
+                margin-left: -16px;
+                margin-top: -12px;
+            }
+        }
+        .finance-purchase-name {
+            font-family: SourceHanSansCN-Regular;
+            font-size: 12px;
+            letter-spacing: 0;
+            line-height: 18px;
+            padding: 5px 0;
+        }
+        .finance-purchase-desc {
+            font-size: 16px;
+            color: #000;
+            letter-spacing: 0;
+            line-height: 20px;
+        }
+        .finance-purchase-num {
+            font-family: DINAlternate-Bold;
+            font-size: 28px;
+            color: #FF2D00;
+            letter-spacing: 1px;
+            margin-top: 10px;
+        }
+        .finance-purchase-time-slot {
+            font-family: SourceHanSansCN-Regular;
+            font-size: 10px;
+            color: #979797;
+            letter-spacing: 0;
+            text-align: center;
+        }
+        .finance-purchase-button {
+            width: 100%;
+            line-height: 37px;
+            font-family: PingFangSC-Medium;
+            font-size: 14px;
+            color: #FFF;
+            background: var(--themeColor);
+            border-radius: 8px;
+            margin-top: 17px;
+        }
+        .income-purchase-content {
+            font-family: SourceHanSansCN-Regular;
+            .income-purchase-name {
+                font-size: 16px;
+                color: #000;
+                letter-spacing: 0;
+                line-height: 20px;
+                margin-top: 10px;
+            }
+            .income-purchase-desc {
+                font-size: 12px;
+                letter-spacing: 0;
+                line-height: 18px;
+                padding: 5px 0;
+                color: #979797;
+            }
+            .purchase-tags-list {
+                display: flex;
+                margin-top: 14px;
+                .purchase-tags-item {
+                    width: 33.33%;
+                    font-size: 10px;
+                    color: #979797;
+                    letter-spacing: 0;
+                    text-align: center;
+                    .purchase-tags-item-value {
+                        font-family: DINAlternate-Bold;
+                        font-size: 19px;
+                        color: #262626;
+                        margin-bottom: 2px;
+                    }
+                    &:first-child {
+                        .purchase-tags-item-value {
+                            color: red;
+                        }
+                    }
+                    &:nth-child(2) {
+                        .purchase-tags-item-value {
+                            border-left: 1px solid #DDD;
+                            border-right: 1px solid #DDD;
+
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}

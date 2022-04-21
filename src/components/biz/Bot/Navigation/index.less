@@ -1,0 +1,140 @@
+@position-height: 500px;
+
+.bd-bot-navigation-wrap {
+    .bd-bot-navigation-block {
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        border-radius: 16px 16px 0 0;
+        padding: 16px;
+        padding-bottom: 75px;
+    }
+    // join和leave 离开时的遮罩背景变化所以避免使用 setTime
+    // join 进入用的 animation 应为如果给 bottom 变化过度效果不好
+    // leave 离开时给的transition
+    &.navigation-join {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: transparent;
+        z-index: 98;
+        animation: join .2s linear;
+        background-color: rgba(0, 0, 0, 0.3);
+        transition: background-color .5s;
+        .bd-bot-navigation-block {
+            position: absolute;
+            bottom: 0;
+            transition: bottom .2s;
+        }
+    }
+    &.navigation-leave {
+        background-color: transparent;
+        transition: background-color .5s;
+        animation: leave .2s linear;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 99;
+        .bd-bot-navigation-block {
+            position: absolute;
+            bottom: -@position-height;
+            transition: bottom .2s;
+
+        }
+    }
+    .bd-bot-navigation {
+        z-index: 99;
+        max-height: 500px;
+        min-height: 300px;
+        overflow-y: auto;
+        display: block;
+        scrollbar-width: none; /* Firefox */
+        -webkit-overflow-scrolling: touch;    /* ios5+ */ 
+        &::-webkit-scrollbar {
+            display: none; /* Chrome Safari */
+        }
+        .bd-bot-navigation-class {
+            .navigation-class-name {
+                font-family: SourceHanSansCN-Regular;
+                font-size: 12px;
+                color: #979797;
+                letter-spacing: 0;
+                line-height: 18px;
+            }
+            .navigation-class-block {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                margin-bottom: 12px;
+                .navigation-item-block {
+                    width: 48%;
+                    .bd-bot-navigation-item {
+                        display: flex;
+                        height: 60px;
+                        background: #F6F6F6;
+                        border-radius: 8px;
+                        align-items: center;
+                        padding: 10px;
+                        margin-top: 8px;
+                        .navigation-skill-item-img {
+                            width: 24px;
+                            height: 24px;
+                            margin-right: 12px;
+                        }
+                        .navigation-skill-item-info {
+                            width: 80%;
+                            .skill-info-name {
+                                font-family: PingFangSC-Regular;
+                                font-size: 14px;
+                                color: #000;
+                                letter-spacing: 0;
+                                line-height: 21px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
+                            .skill-info-desc {
+                                font-family: PingFangSC-Regular;
+                                font-size: 12px;
+                                color: #979797;
+                                letter-spacing: 0;
+                                line-height: 15px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+
+}
+
+@keyframes join {
+    from {
+        position: fixed;
+        bottom: -@position-height;
+    }
+    to {
+        position: fixed;
+        bottom: 0;
+    }
+}
+
+@keyframes leave {
+    from {
+        position: fixed;
+        bottom: 0;
+    }
+    to {
+        position: fixed;
+        bottom: -@position-height;
+    }
+}

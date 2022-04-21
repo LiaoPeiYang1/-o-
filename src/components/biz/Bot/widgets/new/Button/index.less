@@ -1,0 +1,79 @@
+/**
+ * @file components/biz/Bot/DialogZone/components/Buttons/index.less
+ * @author dingyang
+ */
+
+.bd-bot-button {
+    &:not(.bd-bot-disabled) {
+        &:active {
+            opacity: .7;
+            -webkit-tap-highlight-color: transparent;
+        }
+    }
+    &.bd-bot-primary-button {
+        flex: 1;
+        font-family: SourceHanSansCN-Heavy, PingFangSC-Semibold;
+        margin-right: 8px;
+        border-radius: 8px;
+        font-size: 14px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        text-align: center;
+        border: 1px solid transparent;
+        color: #fff;
+        background-color: var(--themeColor);
+        &:last-child {
+            margin-right: 0;
+        }
+        &.bd-bot-disabled {
+            background-color: #dadada;
+            color: #fff;
+        }
+    }
+    &.bd-bot-normal-button {
+        flex: 1;
+        font-family: SourceHanSansCN-Heavy, PingFangSC-Semibold;
+        margin-right: 8px;
+        border-radius: 8px;
+        font-size: 14px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        text-align: center;
+        color: #333;
+        border: 1px solid #ddd;
+        &:last-child {
+            margin-right: 0;
+        }
+        &.bd-bot-disabled {
+            background-color: #dadada;
+            color: #fff;
+        }
+    }
+    &.bd-bot-inline-button {
+        position: relative;
+        font-size: 14px;
+        color: var(--menuButtonColor);
+        padding: 10px 0;
+        border-top: 1px solid #ddd;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 9px;
+            height: 13px;
+            margin-top: -7px;
+            background: url(../../../../../../../assets/img/more.png) no-repeat center center;
+            background-size: contain;
+        }
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+    &.bd-bot-link {
+        text-decoration: none;
+        color: inherit;
+        display: inline-block;
+        width: 100%;
+    }
+}

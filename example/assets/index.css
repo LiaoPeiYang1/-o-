@@ -1,0 +1,55 @@
+/**
+ * @file modules/aida/aida.less
+ * @author v_liaopeiyang
+ */
+
+.ai-le-qi-main-wrap {
+    padding-bottom: 30px;
+}
+
+.ai-le-qi-main-wrap img {
+    width: 100%;
+}
+
+.ai-le-qi-main-wrap .app-appoint-block {
+    width: 100%;
+    height: 84px;
+}
+
+.ai-le-qi-main-wrap .app-appoint-block {
+    width: 82%;
+    height: 49px;
+    margin-top: 10px;
+    background: #FF8F63;
+    box-shadow: 0 4px 8px 0 rgba(255, 149, 106, .5);
+    border-radius: 49px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 23px;
+    letter-spacing: 1.46px;
+    text-shadow: 0 2px 4px #EA8D66;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.ai-le-qi-main-wrap .app-appoint-block span {
+    color: #fff;
+    font-family: SourceHanSansCN-Heavy;
+}
+
+.ai-le-qi-main-wrap .app-appoint-btn .appoint-original-price {
+    font-family: SourceHanSansCN-Light;
+    margin-left: 5px;
+    font-size: 12px;
+    color: #fff;
+    letter-spacing: .76px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, .50);
+    text-decoration: line-through;
+}
+
+.app-appoint-block a {
+    text-decoration: none;
+}

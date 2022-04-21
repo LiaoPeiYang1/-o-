@@ -1,0 +1,74 @@
+/**
+ * @file components/biz/Bot/BotDigitalHuman/index.less
+ * @author sunwen05
+ */
+
+.bd-layout-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .bd-layout-main {
+        flex: 1;
+        overflow: hidden;
+        position: relative;
+        &.bd-layout-main-hide {
+            opacity: 0;
+        }
+    }
+}
+.bd-layout-digitalhuman-module {
+    transition: opacity .8s ease-in-out, height .8s ease-in-out, width .8s ease-in-out;
+    height: 0;
+    opacity: 0;
+
+    border-radius: 8px;
+    background-color: #000;
+
+    position: relative;
+    left: 50%;
+    z-index: 9;
+    transform: translate(-50%, 0);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    .bd-layout-scrolltext-main {
+        position: absolute;
+        bottom: 0;
+        left: 12px;
+        transform: translateY(50%);
+        z-index: 9999;
+    }
+
+    &.fullscreen-video {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 18;
+    }
+    &.video-visible {
+        opacity: 1;
+    }
+
+    .bd-layout-fullscreen-main {
+        position: absolute;
+        top: 210px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 19;
+    }
+    
+    .control-bot-back-icon {
+        position: fixed;
+        top: 7px;
+        left: 7px;
+        z-index: 17;
+        color: white;
+        svg {
+            width: 30px;
+            height: 32px;
+            background-color: rgba(0, 0, 0, .3);
+        }
+    }
+}
